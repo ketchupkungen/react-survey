@@ -3,16 +3,23 @@ An email survey composer. For sending "no-reply" mail do various selected emails
 
 # How to install
 1 - cd into root folder
+
     npm install
    
 2 - cd into client
+
     npm install
     
 3 - Login to https://console.developers.google.com/apis/dashboard
+
     Create a new project called example-dev.
+    
     After that make sure you are in that project folder.
+    
     Go into ENABLE APIS AND SERVICES.
+    
     Then search for Google+ API and enable it.
+    
     As for credentials, this is where you get the key.
     
     type:Web application
@@ -29,14 +36,22 @@ An email survey composer. For sending "no-reply" mail do various selected emails
     Then save.
     
 3 - Set up a sendgrid account for sending emails
+
     Go into settings
+    
     API Keys
+    
     Create API Key
+    
     IMPORTANT! Copy the keys and save them somewhere, because you won´t be able to see it again
+    
     After that go inte the sub category called Mail Settings.
+    
     Go into Event Notification
+    
     Edit the HTTP POST URL to:
     https:// random letters and numbers you assign in the sendgrid_webhook.js .localtunnel.me/api/surveys/webhooks
+    
     or if prod - https://example.com/api/surveys/webhooks
     
 4 - Set up an account at stripe and get the keys
