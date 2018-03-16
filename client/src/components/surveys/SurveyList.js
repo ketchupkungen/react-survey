@@ -13,7 +13,7 @@ class SurveyList extends Component {
 		//return this.props.surveys.reverse().map(survey => {
 
 		// Shows the latest on top
-		return this.props.surveys.map((survey, submitSurvey, history) => {
+		return this.props.surveys.reverse().map((survey, submitSurvey, history) => {
 			return (
 				<div className="card" key={survey._id}>
 					<div className="card-content">
