@@ -13,7 +13,9 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && del-cli client/node_modules",
-    "webhook": "forever sendgrid_webhook.js"
+    "webhook": "forever sendgrid_webhook.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Bjurn",
   "license": "ISC",
@@ -35,9 +37,11 @@
     "react-stripe-checkout": "^2.6.3",
     "redux-thunk": "^2.2.0",
     "sendgrid": "^5.2.3",
-    "stripe": "^5.5.0"
+    "stripe": "^5.5.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "forever": "^0.15.3"
-  }
+  },
+  "snyk": true
 }
